@@ -1,0 +1,117 @@
+@use "../util" as u;
+
+.flex {
+   display: flex;
+   width: min(100% - u.rem(32), u.rem(600));
+   
+
+   @include u.breakpoint-down(small) {
+      flex-direction: column;
+   }
+
+   &__product {
+      flex: 1;
+
+      .mobile-image {
+         display: none;
+      }
+   
+      img {
+         border-radius: u.rem(10) 0 0 u.rem(10);
+      }
+
+      @include u.breakpoint-down(small) {
+         .mobile-image {
+            display: block;
+         }
+   
+         .desktop-image {
+            display: none;
+         }
+
+         img {
+            border-radius: u.rem(10) u.rem(10) 0 0;
+         }
+      }
+   }
+   
+   &__content {
+      flex: 1;
+      background-color: hsl( var(--color-white));
+      border-radius: 0 u.rem(10) u.rem(10) 0;
+
+      h1 {
+         font-weight: 500;
+         margin: u.rem(32) 0 u.rem(20) u.rem(32);
+      }
+
+      > h2 {
+         color: hsl( var(--color-very-dark-blue) );
+         margin: 0 u.rem(32) u.rem(24) u.rem(32);
+      }
+
+      > p {
+         margin: 0 u.rem(32) u.rem(29) u.rem(32);
+      }
+
+      .price {
+         display: flex;
+         gap: u.rem(19);
+         align-items: center;
+         margin: 0 u.rem(32) u.rem(30) u.rem(32);
+         
+         .discount {
+            color: hsl( var(--color-dark-cyan) );
+         }
+         
+         .original {
+            font-size: u.rem(13);
+            text-decoration: line-through;
+            margin-bottom: 0;
+         }
+      }
+
+      .button {
+         background-color: hsl( var(--color-dark-cyan) );
+         display: flex;
+         gap: u.rem(11.61);
+         justify-content: center;
+         align-items: center;
+         border: 0;
+         padding: u.rem(15) u.rem(62);
+         border-radius: u.rem(8);
+         margin-inline: u.rem(32);
+
+         > p {
+            font-weight: 700;
+            line-height: 1.2193;
+            color: hsl( var(--color-white) );
+         }
+      }
+
+      @include u.breakpoint-down(small) {
+         border-radius: 0 0 u.rem(10) u.rem(10);
+
+         h1 {
+            margin: u.rem(24) u.rem(24 )u.rem(12) u.rem(24);
+         }
+
+         > h2 {
+            margin: 0 u.rem(24) u.rem(24) u.rem(16);
+         }
+
+         > p {
+            margin: 0 u.rem(24) u.rem(24) u.rem(24);
+         }
+
+         .price {
+            margin: 0 u.rem(24) u.rem(24) u.rem(20);
+         }
+
+         .button {
+            padding: u.rem(15) u.rem(92);
+            margin: 0 u.rem(24) u.rem(24) u.rem(24);
+         }
+      }
+   }
+}

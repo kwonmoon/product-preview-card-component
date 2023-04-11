@@ -1,0 +1,46 @@
+@use "../util" as u;
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+html {
+   font-size: 100%;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+body {
+   background-color: hsl( var(--color-cream) );
+   color: hsl( var(--color-dark-grayish-blue) );
+   font-family: u.$font-sans;
+   font-size: u.rem(14);
+   line-height: 1.6429;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
