@@ -81,6 +81,7 @@ a:active {
 
 :root {
   --color-dark-cyan: 158, 36%, 37%;
+  --color-deep-aqua: 157, 43%, 18%;
   --color-cream: 30, 38%, 92%;
   --color-very-dark-blue: 212, 21%, 14%;
   --color-dark-grayish-blue: 228, 12%, 48%;
@@ -161,6 +162,10 @@ a:active {
   font-weight: 700;
   line-height: 1.2193;
   color: hsl(var(--color-white));
+}
+.flex__content .button:hover {
+  cursor: pointer;
+  background-color: hsl(var(--color-deep-aqua));
 }
 @media (max-width: 43.75em) {
   .flex__content {

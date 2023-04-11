@@ -87,8 +87,14 @@
             line-height: 1.2193;
             color: hsl( var(--color-white) );
          }
+
       }
 
+      .button:hover {
+         cursor: pointer;
+         background-color: hsl( var(--color-deep-aqua) );
+      }
+      
       @include u.breakpoint-down(small) {
          border-radius: 0 0 u.rem(10) u.rem(10);
 
