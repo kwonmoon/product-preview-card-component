@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/kwonmoon/product-preview-card-component)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://incandescent-begonia-bf4194.netlify.app/)
 
 ## My process
 
