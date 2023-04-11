@@ -88,12 +88,12 @@
             color: hsl( var(--color-white) );
          }
 
+         &:hover {
+            cursor: pointer;
+            background-color: hsl( var(--color-deep-aqua) );
+         }
       }
 
-      .button:hover {
-         cursor: pointer;
-         background-color: hsl( var(--color-deep-aqua) );
-      }
       
       @include u.breakpoint-down(small) {
          border-radius: 0 0 u.rem(10) u.rem(10);
